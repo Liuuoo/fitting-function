@@ -12,7 +12,7 @@ x_csv = df["x"]
 y_csv = df["y"]
 
 # 重新计算 y = sin(2x) + cos(5x)
-x_calc = np.linspace(0, 2 * np.pi, 1000)
+x_calc = np.linspace(-20 * np.pi, 20 * np.pi, 1000)
 y_calc = np.sin(2 * x_calc) + np.cos(5 * x_calc)
 
 # 绘制曲线（使用不同虚线样式）
@@ -28,5 +28,5 @@ plt.legend()
 plt.grid(True)
 
 # 保存图片
-plt.savefig("comparison_plot.png", dpi=300)
+plt.savefig("image/对比图.png", dpi=300)
 plt.show()
