@@ -44,8 +44,6 @@ plt.grid(True)
 plt.savefig("comparison_plot.png", dpi=300)
 plt.show()
 ```
-执行结果如下：
-![对比图](image/对比图.png)
 这个对比代码后续可能还会进行重构，让它能通过出入的文件进行对比。这边先搁置，最后再来处理。当然，最后也不是拿出这里的数据进行测试，而是-20T~-10T,10T~20T的数据。  
 当然，由于有限的测试集与训练集，验证集也使用测试集，我感觉问题不大。但实际上如果动态根据验证结果更改学习率，那选取不一样的验证集确实是有必要的。
 ### 网络结构前瞻
@@ -79,7 +77,7 @@ $$
 ##### 原因
 总之后来才发现读取x_test时将矩阵传成了值。不敢相信我对着将一整个矩阵传成值后再传
 入成为矩阵的画出来的图像研究了多久T_T。当时的图像都是这样的：
-研究了一天的输出结果：
+
 <img src="RM_image/78bdbdfc05f09d3f2ff050d1bbb7b8f4.png" width="300" style="display: inline-block;"/>
 <img src="RM_image/effeaded0b48f5a1484cb152176d96f7.png" width="300" style="display: inline-block;"/>
 
